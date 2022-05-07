@@ -96,6 +96,7 @@ public class Thread implements Runnable{
 
 ## 2、线程相关方法
 ### 2.1 interrupt，join 
+Thread对象方法，interrupt打断指定线程，join将指定线程加入并使当前线程阻塞
 ```java
 public Class Main {
     public static void main(String[] args) {

@@ -1,9 +1,13 @@
 # 一、线程生创建与生命周期
+## 进程和线程
+
+进程是各个应用程序在内存中占用的空间，各进程之间互不干扰。同时，CPU为每个程序分配一个时间段，称之为进程的时间片。如果时间片结束进程还没有运行完，则暂停该进程，并将CPU分配给其它进程（上下文切换）。被暂停的进程会保存当前的状态（进程标识、进程使用的资源等），下次切换回来时可保持暂停前的状态继续运行。如果在时间片内进程运行阻塞或结束，则CPU不用等待时间片结束，立即切换到其它进程。
+CPU时间片保证了操作系统在同一时间内运行多个进程，而线程使进程在同一时间内可执行多个子任务
 
 ---
 ## 1、Thread类和Runnable接口
 <div align=left>
-<img title="Thread类和Runnable接口" width = 150 src = "./images/线程和runnable接口继承关系.png" />
+<img width = 150 src = "./images/线程和runnable接口继承关系.png" />
 </div>
 
 
@@ -92,22 +96,20 @@ public class Thread implements Runnable{
 }
 ```
 
+---
+## 2、线程状态
+<div align=left>
+<img width = 600 src = "./images/线程生命周期.png"/>
+</div>
+线程的其中状态：NEW、BLOCKED、READY、RUNNING、WAITING、TIMEWAITING、TERMINATED
+
+## 3、线程方法
+
+### 2.1 使线程由RUNNING进入WAITING状态
+Object.wait()、Thread.sleep、LockSupport.park()
 
 
-## 2、线程相关方法
-### 2.1 interrupt，join 
-Thread对象方法，interrupt打断指定线程，join将指定线程加入并使当前线程阻塞
-```java
-public Class Main {
-    public static void main(String[] args) {
-        Thread t1 = new Thread(()->{
-            try {
-                System.out.println("线程t1开始运行");
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                System.out.println("线程t1开始运行");
-            }
-        })
-    }
-}
-```
+### Reference
+
+[1] 《深入浅出Java多线程》
+[2] 

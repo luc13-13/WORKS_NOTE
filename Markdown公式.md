@@ -35,3 +35,18 @@ font标签不仅可以改变颜色，还包括size
 &emsp; 表示首行缩进一个全角字符
 &ensp; 表示首行缩进一个半角字符
 ```
+
+## 图片相关
+####（1）插入图片
+可以修改图片大小和位置
+```markdown
+<div align=left>
+<img  width=360 src="./images/tree/满二叉树.png" />
+</div>
+```
+
+```markdown
+![无法加载时显示的文字](./images/tree/满二叉树.png)
+```
+![无法加载时显示的文字](./images/tree/满二叉树.png)
+

@@ -105,6 +105,7 @@ public void preorderTraverse() {
         System.out.println("层序遍历：");
         Queue<BinaryNode<T>> queue = new LinkedList<>();
         BinaryNode<T> p = this.root;
+        
         while(p != null) {
             // 访问 p 结点
             System.out.println(p.data.toString());

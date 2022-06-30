@@ -94,6 +94,7 @@ srem key member1 [member2 ...]
 ```
 
 ## Zset
+// TODO:未完成
 有序集合，每个元素关联一个排序字段score，根据score进行排序。
 
 ```text
@@ -104,3 +105,5 @@ zadd key score1 member1 [score2 member2 ...]
 
 
 ```
+
+// TODO: redis持久化策略

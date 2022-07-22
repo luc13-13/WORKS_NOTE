@@ -50,3 +50,24 @@ font标签不仅可以改变颜色，还包括size
 ```
 ![无法加载时显示的文字](./images/tree/满二叉树.png)
 
+## 绘图
+### 流程图语法 mermaid
+
+```text
+mermaid提供流程图、时序图等多种绘图语法
+
+绘制流程图
+flowchart TB
+node1[desc]-->node[desc]
+
+绘制时序图
+sequenceDiagram
+线条类型： 
+-> 实线 --> 虚线 ->> 实线箭头 -->> 虚线箭头 
+-x 带x的实线箭头 --x 带x的虚线箭头
+
+
+　
+```
+
+

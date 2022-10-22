@@ -94,7 +94,7 @@ srem key member1 [member2 ...]
 ```
 
 ## Zset
-// TODO:未完成
+// TODO:zset操作
 有序集合，每个元素关联一个排序字段score，根据score进行排序。
 
 ```text
